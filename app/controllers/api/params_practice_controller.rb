@@ -18,15 +18,13 @@ class Api::ParamsPracticeController < ApplicationController
 
   def number
     @guess = params[:number].to_i
-    @number = 7
-    if @guess == @number
-      @message = "Holy ish! You guessed it correctly!"
-    elsif @guess < 7
+    number = 7
+    if @guess < number
       @message = "higher!"
-    elsif @guess > 7
+    elsif @guess > number
       @message = "lower!"
     else
-      @message = "pick a number you weirdo!" 
+      @message = "Holy ish! You guessed it correctly!"
     end
     render 'number.json.jb'
   end
