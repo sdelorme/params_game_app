@@ -1,1 +1,7 @@
-{message: "Hello there, the angel from my nightmare"}
+{
+message: if @name[0] == "a" 
+           p "Hey, your name starts with the first letter of the alphabet!"
+else
+  p "Hey, your name doesn't start with the first letter of the alphabet!"
+         end
+}
