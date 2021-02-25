@@ -1,6 +1,11 @@
 class Api::ParamsPracticeController < ApplicationController
-  def practice
+  def letter
     @name = params[:name]
-    render 'practice.json.jb'
+    render 'letter.json.jb'
+  end
+
+  def number
+    @number = 7
+    render 'number.json.jb'
   end
 end
