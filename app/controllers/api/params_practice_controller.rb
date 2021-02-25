@@ -29,4 +29,14 @@ class Api::ParamsPracticeController < ApplicationController
     render 'number.json.jb'
   end
 
+  def credentials
+    username = params[:username].downcase
+    password = params[:password].downcase
+    if username == "hugh" && password == "swordfish"
+      @message = "Valid credentials mate!"
+    else 
+      @message = "invalid credentials mate!"
+    end
+  end
+
 end

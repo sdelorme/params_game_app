@@ -8,5 +8,7 @@ Rails.application.routes.draw do
     get "/letter/:name" => "params_practice#letter"
     get "/number/:number" => "params_practice#number"
     post "/post_number" => "params_practice#number"
+    post "/credentials" => "params_practice#credentials"
   end
+
 end
